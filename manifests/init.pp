@@ -237,7 +237,8 @@ class redis (
   $log_dir             = params_lookup( 'log_dir' ),
   $log_file            = params_lookup( 'log_file' ),
   $port                = params_lookup( 'port' ),
-  $protocol            = params_lookup( 'protocol' )
+  $protocol            = params_lookup( 'protocol' ),
+  $ip_to_bind          = 'undef',
   ) inherits redis::params {
 
   $bool_source_dir_purge=any2bool($source_dir_purge)
